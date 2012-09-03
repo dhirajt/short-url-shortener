@@ -1,20 +1,23 @@
-
-Short
+short-url-shortener
+===================
 
 A simple URL shortener using Django and fbootstrap for CSS.
 
+
 How to RUN:
-1. Download the fbootstrap project from https://github.com/ckrack/fbootstrapp/downloads
+-----------
 
-2. Unpack it in /static/fbboot/ folder.
+- Download the fbootstrap project from https://github.com/ckrack/fbootstrapp/downloads
 
-3. Set these fields according to your database in settings.py.
+- Make a folder named 'static' in short folder and unpack the fbootsrap project files in it.
 
-	'ENGINE': 'django.db.backends.', 
-        'NAME': '',                      
-        'USER': '',                      
+- Set these fields according to your database in settings.py.
+
+        'ENGINE': 'django.db.backends.',
+        'NAME': '',
+        'USER': '',
         'PASSWORD': '',
 
-4. Run python manage.py runserver.
+- Run python manage.py runserver.
 
 
