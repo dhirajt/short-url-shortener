@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sho.rt: Your own URL shortner..</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="{{STATIC_URL}}/fbboot/bootstrap.css" rel="stylesheet">
+
+    
+    <script src="{{STATIC_URL}}/js/jquery-1.7.min.js"></script>
+    <script src="{{STATIC_URL}}/js/bootstrap-alerts.js"></script>
+
+
+    <style type="text/css">
+      body {
+        padding: 100px 100px 100px 100px;
+	font-family:'lucida grande',tahoma,Ubuntu,Arial,Times New Roman;
+      }
+ 
+      .hero-unit p{ 	font-size:11px; 
+			font-weight:100;
+			line-height:15px;
+			}
+      .container { width:600px;
+		   height:500px; }
+
+    </style>
+    
+  
+  </head>
+
+  <body>
+    
+    <div class="container">
+    
+      <div class="hero-unit">
+        <h2>Sho.rt: Your own URL shortner..</h2> <br />
+
+	<form  method="post">
+	  {% csrf_token %}
+	  <input type="text" name="uname" /> <button class="btn primary" type="submit">shortify!</button><br />
+	</form>
+
+	{% if address %}
+
+	<div class="alert-message success fade in" data-alert="alert" style="width:263px;">
+        <a class="close" href="#">×</a>
+        <p>Bravo! Your sho.rt URL: <strong><a href="{{address}}">{{address}}</a> </strong></p>
+        </div>
+
+	{% endif %}
+
+        {% for i in alert %}
+	 <div class="alert-message error fade in" data-alert="alert" style="width:263px;">
+             <a class="close" href="#">×</a>
+             <p> 
+		<strong>Oh snap!</strong> {{i}}
+             </p>
+         </div>
+	
+	{% endfor %}
+    </div>
+
+      <footer>
+        <p>&copy; sho.rt 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+   
+  </body>
+</html>
