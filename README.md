@@ -11,9 +11,9 @@ How to RUN:
     - Make a folder named 'static' in short folder and unpack the fbootsrap project files in it.
     - Set these fields according to your database in **settings.py**.
 
-           'ENGINE': 'django.db.backends.',
-           'NAME': '',
-           'USER': '',
-           'PASSWORD': '',
+                 'ENGINE': 'django.db.backends.',
+                 'NAME': '',
+                 'USER': '',
+                 'PASSWORD': '',
 
     - Run **python manage.py runserver.**
