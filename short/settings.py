@@ -70,7 +70,7 @@ STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
-STATICFILES_DIRS = ( '/home/dhiraj/Desktop/short/static/',
+STATICFILES_DIRS = ( '/home/dhiraj/Desktop/short/static/',     #EDIT THIS!!!! Use forward slashes on windows!
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
