@@ -15,9 +15,8 @@ How to RUN:
                  'NAME': '',
                  'USER': '',
                  'PASSWORD': ''
-    
-     - Run **python manage.py syncdb**
-     - Run **python manage.py runserver**
+   - Run **python manage.py syncdb**
+   - Run **python manage.py runserver**
 
  2. On Windows.
     - Download the fbootstrap project from https://github.com/ckrack/fbootstrapp/downloads <br />
