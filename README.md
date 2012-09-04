@@ -28,6 +28,6 @@ How to RUN:
                  'USER': '',
                  'PASSWORD': ''
     - Edit the STATICFILES_DIRS and TEMPLATE_DIRS in **settings.py** and use something like                        
-      'C:/Documents and Settings/User/Desktop/short/templates'  #Notice forward slashes
+      *'C:/Documents and Settings/User/Desktop/short/templates'*  **#Notice forward slashes**
     - Run **python manage.py syncdb**
     - Run **python manage.py runserver**
