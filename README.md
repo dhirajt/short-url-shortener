@@ -14,6 +14,5 @@ How to RUN:
                  'ENGINE': 'django.db.backends.',
                  'NAME': '',
                  'USER': '',
-                 'PASSWORD': '',
-
+                 'PASSWORD': ''
     - Run **python manage.py runserver.**
