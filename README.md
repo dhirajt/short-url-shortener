@@ -15,6 +15,7 @@ How to RUN:
         'NAME': '',
         'USER': '',
         'PASSWORD': ''
+
     - Run **python manage.py syncdb**
     - Run **python manage.py runserver**
 
