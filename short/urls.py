@@ -15,9 +15,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
      url(r'^admin/', include(admin.site.urls)),
 
-     url(r'^(\d+[A-Za-z]+)/','short.views.redirect'),
-     url(r'^([A-Za-z]+\d+[A-Za-z]+)/','short.views.redirect'),
-     url(r'^([A-Za-z]+\d+)/','short.views.redirect'),
-     url(r'^(\d+[A-Za-z]+\d+)/','short.views.redirect')
+     url(r'^(.....)/','short.views.redirect'),
      
 )
