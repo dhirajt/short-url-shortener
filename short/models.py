@@ -3,10 +3,11 @@ import hashlib
 
 
 class Url(models.Model):
-	url=models.URLField(verify_exists=True,max_length=200,blank=False,null=False)
-	shorturl=models.URLField(null=True)
+	url=models.URLField(verify_exists=True,max_length=200,default=None,blank=False,unique=True)
+	shorturl=models.URLField(null=True,blank=True)
 	date=models.DateTimeField(auto_now_add=True)
 	count=models.IntegerField(default=0)
+        isspam=models.IntegerField(default=0)
 
 	def __unicode__(self):
 		return self.url
@@ -17,6 +18,3 @@ class Url(models.Model):
 	
 	class Meta:
 		app_label = u'short'
-		
-		
-		
