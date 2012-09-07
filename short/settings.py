@@ -1,4 +1,7 @@
 # Django settings for short project.
+import os
+PROJECT_DIR = os.path.dirname(__file__)
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -70,7 +73,7 @@ STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
-STATICFILES_DIRS = ( '/home/dhiraj/Desktop/short/static/',     #EDIT THIS!!!! Use forward slashes on windows!
+STATICFILES_DIRS = ( os.path.join(PROJECT_DIR, "static"),    
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -104,7 +107,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'short.urls'
 
-TEMPLATE_DIRS = ( '/home/dhiraj/Desktop/short/templates',
+TEMPLATE_DIRS = ( os.path.join(PROJECT_DIR, "templates"),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
