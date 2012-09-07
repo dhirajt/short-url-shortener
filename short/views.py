@@ -3,8 +3,7 @@ from models import Url
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse,Http404,HttpResponseRedirect
-from django.db import transaction
-
+from django.core.exceptions import ValidationError
 
 def home(request):
 	alert=[]
@@ -17,10 +16,14 @@ def home(request):
 				
 			except Url.DoesNotExist:
 				obj=Url(url=address)
-				obj.shortifyurl()
-				obj.save()
-				address=obj.shorturl
-				
+				try:
+					obj.clean_fields()
+					obj.shortifyurl()
+					obj.save()
+					address=obj.shorturl
+				except ValidationError, error:
+					address=None
+					alert=error.messages				
 		else :
 			alert.append('Please use a valid URL!')		
 
