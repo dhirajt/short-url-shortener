@@ -5,6 +5,10 @@ from django.template import RequestContext
 from django.http import HttpResponse,Http404,HttpResponseRedirect
 from django.core.exceptions import ValidationError
 
+import random
+
+x=['Oops! ','Oh snap! ','Uh-oh! ']
+
 def home(request):
 	alert=[]
 	if request.method=='POST':
@@ -26,7 +30,7 @@ def home(request):
 					alert=error.messages				
 		else :
 			alert.append('Please use a valid URL!')		
-
+		alert=[ x[random.randint(0,2)] + i for i in alert ]		
 		return render_to_response('home.html',{'address':address,'alert':alert},context_instance=RequestContext(request))
 		
 	
