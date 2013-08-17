@@ -7,10 +7,8 @@ A simple URL shortener using Django and fbootstrap for CSS.
 How to RUN:
 -----------
 
-- Download the fbootstrap project from https://github.com/ckrack/fbootstrapp/archive/master.zip
-- Make a folder named 'static' in short folder and add the following files from the zipped file: <br />
-  js,lib folders and css files bootstrap.css,bootstrap.min.css
-- Set these fields according to your database in **settings.py**.                                                                                                                      
+- Set the BASE_URL in settings.py by default it is 'http://sho.rt/'
+- Set these fields according to your database in **settings.py**.                                                                  
         
            'ENGINE': 'django.db.backends.',
            'NAME': '',

@@ -1,13 +1,12 @@
 from models import Url
 
-from django.shortcuts import render_to_response
-from django.template import RequestContext
-from django.http import HttpResponse,Http404,HttpResponseRedirect
+from django.shortcuts import render
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.exceptions import ValidationError
 
 import random
 
-x=['Oops! ','Oh snap! ','Uh-oh! ']
+error_message =['Oops! ','Oh snap! ','Uh-oh! ']
 
 def home(request):
 	alert=[]
@@ -30,12 +29,12 @@ def home(request):
 					alert=error.messages				
 		else :
 			alert.append('Please use a valid URL!')		
-		alert=[ x[random.randint(0,2)] + i for i in alert ]		
-		return render_to_response('home.html',{'address':address,'alert':alert},context_instance=RequestContext(request))
+		alert=[ error_message[random.randint(0,2)] + i for i in alert ]		
+		return render(request,'home.html',{'address':address,'alert':alert})
 		
 	
 	else :
-		return render_to_response('home.html',{'alert':alert},context_instance=RequestContext(request))
+		return render(request,'home.html',{'alert':alert})
 
 
 
@@ -51,7 +50,7 @@ def redirect(request,key):
 		except Url.DoesNotExist:
 			key="Sorry! We couldn't find any url for that address!"			
 			
-	return render_to_response('redir.html',{'key':key},context_instance=RequestContext(request))
+	return render(request,'redir.html',{'key': key})
 			
 	
 	
