@@ -15,7 +15,7 @@
     <style type="text/css">
       body {
         padding: 100px 100px 100px 100px;
-	font-family:"Segoe UI", "Segoe WP",'lucida grande',tahoma,Ubuntu,Arial,Times New Roman;
+	      font-family:"Segoe UI", "Segoe WP",'lucida grande',tahoma,Ubuntu,Arial,Times New Roman;
       }
  
       .hero-unit p{ 	font-size:11px; 
@@ -39,7 +39,7 @@
 
 	<form  method="post">
 	  {% csrf_token %}
-	  <input type="text" name="uname" /> <button class="btn primary" type="submit">shortify!</button><br />
+	  <input type="text" name="uname" placeholder="Enter the link" /> <button class="btn primary" type="submit">shortify!</button><br />
 	</form>
 
 	{% if address %}
