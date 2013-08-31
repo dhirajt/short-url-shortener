@@ -28,8 +28,8 @@ def home(request):
 					address=None
 					alert=error.messages				
 		else :
-			alert.append('Please use a valid URL!')		
-		alert=[ error_message[random.randint(0,2)] + i for i in alert ]		
+			alert.append('Please enter a URL.')		
+		alert=[ random.choice(error_message) + i for i in alert ]		
 		return render(request,'home.html',{'address':address,'alert':alert})
 		
 	

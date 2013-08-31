@@ -5,7 +5,7 @@ import hashlib
 
 
 class Url(models.Model):
-	url=models.URLField(verify_exists=True,max_length=200,default=None,blank=False,unique=True)
+	url=models.URLField(max_length=200,default=None,blank=False,unique=True)
 	shorturl=models.URLField(null=True,blank=True)
 	date=models.DateTimeField(auto_now_add=True)
 	count=models.IntegerField(default=0)
