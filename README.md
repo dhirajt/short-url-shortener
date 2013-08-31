@@ -1,7 +1,7 @@
 short-url-shortener
 ===================
 
-A simple URL shortener using Django and fbootstrap for CSS.
+A dead simple URL shortener using Django and fbootstrap for CSS.
 
 
 How to RUN:
